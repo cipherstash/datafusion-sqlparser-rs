@@ -5291,3 +5291,8 @@ fn parse_bitstring_literal() {
         ))]
     );
 }
+
+#[test]
+fn parse_select_without_projection() {
+    pg_and_generic().verified_stmt("SELECT FROM users");
+}
